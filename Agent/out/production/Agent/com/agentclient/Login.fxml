@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.agentclient.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="362.0" text="Auction House Portal" textAlignment="CENTER">
+               <font>
+                  <Font name="Sawasdee" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="137.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="173.0" prefWidth="162.0" spacing="15.0">
+                     <children>
+                        <Label text="Agent Name:">
+                           <font>
+                              <Font name="Sawasdee" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Account Balance:">
+                           <font>
+                              <Font name="Sawasdee" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Bank IP:">
+                           <font>
+                              <Font name="Sawasdee" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Port:">
+                           <font>
+                              <Font name="Sawasdee" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="115.0" prefWidth="236.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="nameTxtField" />
+                        <TextField fx:id="balanceTxtField" />
+                        <TextField fx:id="bankIPTxtField" />
+                        <TextField fx:id="bankPortTxtField" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#login" prefWidth="54.0" text="Login" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

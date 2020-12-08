@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.agentclient.AppController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="768.0" prefWidth="1009.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Auction">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="auctionTable" layoutX="82.0" layoutY="35.0" prefHeight="728.0" prefWidth="1009.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="ahIDCol" prefWidth="100.0" text="Auction ID" />
+                                    <TableColumn fx:id="itemIDCol" prefWidth="100.0" text="Item ID" />
+                                    <TableColumn fx:id="titleCol" prefWidth="200.0" text="Item Name" />
+                                    <TableColumn fx:id="descCol" prefWidth="150.0" text="Desc" />
+                                    <TableColumn fx:id="minBidCol" prefWidth="100.0" text="Min Bid" />
+                                    <TableColumn fx:id="currentBidCol" prefWidth="100.0" text="Current Bid" />
+                                    <TableColumn fx:id="timeLeftCol" prefWidth="100.0" text="Time Left" />
+                                    <TableColumn fx:id="actionCol" prefWidth="150.0" style="-fx-alignment: CENTER;" text="Action" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Won Items">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="wonItemsTable" prefHeight="728.0" prefWidth="1009.0">
+                                 <columns>
+                                    <TableColumn fx:id="wonAHIDCol" prefWidth="100.0" text="Auction ID" />
+                                    <TableColumn fx:id="wonItemIDCol" prefWidth="100.0" text="Item ID" />
+                                    <TableColumn fx:id="wonTitleCol" prefWidth="200.0" text="Item Name" />
+                                    <TableColumn fx:id="wonDescCol" prefWidth="150.0" text="Desc" />
+                                    <TableColumn fx:id="wonMinBidCol" prefWidth="100.0" text="Min Bid" />
+                                    <TableColumn fx:id="wonBidCol" prefWidth="142.0" text="Accpeted Bid" />
+                                    <TableColumn fx:id="transferFundsCol" prefWidth="209.0" style="-fx-alignment: CENTER;" text="Action" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <VBox alignment="CENTER" prefHeight="768.0" prefWidth="285.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="212.0" text="Welcome,">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameLabel" alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="202.0" text="John Smith" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="195.0" prefWidth="266.0" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="195.0" prefWidth="152.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" text="Total Balance:" textAlignment="RIGHT" />
+                              <Label alignment="CENTER" text="Blocked Funds" textAlignment="RIGHT" />
+                              <Label alignment="CENTER" text="Unblocked Funds:" textAlignment="RIGHT" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="195.0" prefWidth="135.0">
+                           <children>
+                              <Label fx:id="balanceLabel" text="\$100,000,000" />
+                              <Label fx:id="blockedFundsLabel" text="\$100,000,000" />
+                              <Label fx:id="unblockedFundsLabel" text="\$100,000,000" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="refreshAHButton" mnemonicParsing="false" onAction="#refreshAuctionTable" text="Refresh Auction Houses" />
+                  <Button mnemonicParsing="false" onAction="#disconnect" text="Disconnect" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
