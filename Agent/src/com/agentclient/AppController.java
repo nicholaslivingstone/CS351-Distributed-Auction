@@ -1,14 +1,9 @@
 package com.agentclient;
 
 import javafx.application.Platform;
-import javafx.beans.InvalidationListener;
 import javafx.beans.binding.Bindings;
-import javafx.collections.FXCollections;
-import javafx.collections.MapChangeListener;
 import javafx.collections.ObservableList;
-import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -25,7 +20,8 @@ import org.json.simple.JSONObject;
 
 import java.net.URL;
 import java.text.DecimalFormat;
-import java.util.*;
+import java.util.ResourceBundle;
+import java.util.Timer;
 
 /**
  * Controller for App.FXML. Main client logic occurs here once

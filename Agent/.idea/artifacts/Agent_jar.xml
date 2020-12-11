@@ -1,12 +1,9 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Agent:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Agent_jar</output-path>
+    <output-path>$PROJECT_DIR$/../Executables</output-path>
     <root id="archive" name="Agent.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/src/com/agentclient/resources/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="Agent" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../External Library Jar Files/json-simple-1.1.1.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

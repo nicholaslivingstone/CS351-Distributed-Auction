@@ -10,8 +10,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.sql.*;
 import java.util.Iterator;
-import java.util.Random;
-import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static javafx.application.Platform.exit;
@@ -79,15 +77,17 @@ public class AuctionHouseServer implements Runnable{
         // Connect to item database
         if(dbConnection == null){
             try {
-                dbConnection = DriverManager.getConnection("jdbc:sqlite:/home/nick/Desktop/CS351/Distributed Auction/AuctionHouse/src/items.sqlite");
+                dbConnection = DriverManager.getConnection("jdbc:sqlite:./items.sqlite");
+                acquireItems(3);
             } catch (SQLException throwables) {
                 System.out.println("Unable to connect to item database");
+                System.out.println("Server terminating...");
+                Platform.exit();
+                System.exit(1);
                 return;
             }
         }
 
-        // Request initial items
-        acquireItems(3);
 
 
         // Create server socket
